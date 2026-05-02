@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedix Modular</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="business-name">Mi Negocio</h1>
+    <span class="tag" id="business-type">Tipo: Óptica</span>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Configurador modular</h2>
+      <label>Nombre del negocio
+        <input id="input-name" type="text" placeholder="Ej. Bóptica Central" />
+      </label>
+
+      <label>Tipo de negocio
+        <select id="input-type">
+          <option value="optica">Óptica</option>
+          <option value="cafeteria">Cafetería</option>
+          <option value="farmacia">Farmacia</option>
+          <option value="ropa">Tienda de ropa</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+
+      <h3>Módulos</h3>
+      <div id="modules-list" class="checks"></div>
+
+      <button id="save-btn">Guardar configuración</button>
+      <button id="reset-btn" class="secondary">Restablecer</button>
+    </section>
+
+    <section class="panel">
+      <h2>Vista del negocio</h2>
+      <div id="dashboard" class="dashboard"></div>
+    </section>
+  </main>
+
+  <template id="module-card-template">
+    <article class="card">
+      <h3 class="card-title"></h3>
+      <p class="card-description"></p>
+      <button class="card-action">Abrir módulo</button>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
